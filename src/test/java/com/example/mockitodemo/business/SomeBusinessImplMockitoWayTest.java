@@ -29,12 +29,8 @@ public class SomeBusinessImplMockitoWayTest {
 	@Test
 	void findTheGreatestFromAllData_withOneValue() {
 		 
-		DataService mock = mock(DataService.class);
-		when(mock.retrieveAllData()).thenReturn(new int[] {35});
-		
-		SomeBusinessImpl someBusinessImpl = new SomeBusinessImpl(mock );
-		int result = someBusinessImpl.findTheGreatestFromAllData();
-		assertEquals(35, result);
+		when(dataService.retrieveAllData()).thenReturn(new int[] {35});
+		assertEquals(35, someBusinessImpl.findTheGreatestFromAllData());
 	}
 
 }
