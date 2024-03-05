@@ -33,4 +33,10 @@ public class SomeBusinessImplMockitoWayTest {
 		assertEquals(35, someBusinessImpl.findTheGreatestFromAllData());
 	}
 
+	@Test
+	void findTheGreatestFromAllData_withEmptyArray() {
+		 
+		when(dataService.retrieveAllData()).thenReturn(new int[] {});
+		assertEquals(Integer.MIN_VALUE, someBusinessImpl.findTheGreatestFromAllData());
+	}
 }
