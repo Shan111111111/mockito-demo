@@ -107,4 +107,37 @@ public class SomeBusinessImplExtendedWithMoreMethodsTest {
 	  assertEquals(0, result);
 	}
 	
+//	@Test
+//	public void testSingleElement() {
+//		int[] array = { 1 };
+//		int result = classUnderTest.add(array);
+//		assertEquals(1, result);
+//	}
+	@Test
+	public void testAdd_SingleElement() {
+	  int[] array = {1};
+	  int result = someBusinessImpl.add(array);  
+	  assertEquals(1, result);
+	}
+	
+//	@Test
+//	public void testMultipleElements() {
+//	  int[] array = {1, 2, 3};
+//	  int result = classUnderTest.add(array);
+//	  assertEquals(6, result);
+//	}	
+	@Test
+	public void testAdd_MultipleElements() {
+	  int[] array = {1, 2, 3};
+	  int result = someBusinessImpl.add(array);  
+	  assertEquals(6, result);
+	}
+	
+	/*
+	 * @ParameterizedTest
+	 * 
+	 * @ValueSource(ints = {1, 3, 5}) void testWithDifferentValues(int[] array) {
+	 * int result = classUnderTest.add(array); int sum = IntStream.of(array).sum();
+	 * assertEquals(sum, result); }
+	 */
 }
