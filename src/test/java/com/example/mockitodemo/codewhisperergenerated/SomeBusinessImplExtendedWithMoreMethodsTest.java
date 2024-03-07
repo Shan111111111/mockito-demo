@@ -59,5 +59,25 @@ public class SomeBusinessImplExtendedWithMoreMethodsTest {
 		assertEquals(Integer.MIN_VALUE, result);
 	}
 
-}
+	
+	/*
+	 * AS IS TAKEN FROM AWS CODEWHISPERER
+	 * @Test
+	 * public void testMultipleElements() {
+	 *  int[] data = {1, 5, 3, 6, 2};
+	 * 
+	 *  int result = business.findTheGreatestFromAllData();
+	 * 
+	 *  assertEquals(6, result); }
+	 */
+	
+//	ABOVE CW GENERATED CODE IS MODIFIED TO FIT THE LOGIC AND TEST
+	@Test
+	public void testMultipleElements() {
+	  int[] data = {1, 5, 3, 6, 2};
+	  Mockito.when(mockDataService.retrieveAllData()).thenReturn(data);
+	  int result = someBusinessImpl.findTheGreatestFromAllData();
 
+	  assertEquals(6, result);
+	}
+}
