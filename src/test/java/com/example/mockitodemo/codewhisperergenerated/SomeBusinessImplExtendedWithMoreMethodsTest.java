@@ -4,6 +4,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
@@ -80,4 +82,20 @@ public class SomeBusinessImplExtendedWithMoreMethodsTest {
 
 	  assertEquals(6, result);
 	}
+	
+	/*
+	 * @ParameterizedTest
+	 * 
+	 * @ValueSource(ints = { 5, 12 }) void testWithDifferentData(int greatest) {
+	 * 
+	 * // setup test data array int[] data = { 1, 5, 3 };
+	 * Mockito.when(mockDataService.retrieveAllData()).thenReturn(data);
+	 * 
+	 * int result = someBusinessImpl.findTheGreatestFromAllData();
+	 * 
+	 * assertEquals(greatest, result);
+	 * 
+	 * }
+	 */
+	
 }
