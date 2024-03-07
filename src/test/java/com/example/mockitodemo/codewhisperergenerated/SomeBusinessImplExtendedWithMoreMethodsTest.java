@@ -98,4 +98,13 @@ public class SomeBusinessImplExtendedWithMoreMethodsTest {
 	 * }
 	 */
 	
+	
+	
+	@Test
+	public void testAdd_EmptyArray() {
+	  int[] array = {};
+	  int result = someBusinessImpl.add(array);
+	  assertEquals(0, result);
+	}
+	
 }
